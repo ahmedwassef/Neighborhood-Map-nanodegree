@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Egypt map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf8">
+    <link  rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<nav class="nav-par">
+    <button id="tog"></button>
+    <title>Neighborhood Map </title>
+</nav>
+<main class="main">
+    <aside id="side" class="side">
+        <form>
+            <input type="text" placeholder=" search and Filter Locations" data-bind="textInput: SearchText"> </form>
+        <ul data-bind="foreach: SeacrhList">
+            <li data-bind="text: name, click: $parent.placeClicker"> </li>
+        </ul>
+    </aside>
+    <section>
+        <div id="map"></div>
+    </section>
+</main>
+<script src="js/jquery.min.js"></script>
+<script src="js/knockout-3.4.0.js">
+</script>
+<script src="js/geo.js">
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQynaZUzRu7hmgRGd9Dk2_R7wgdHcNUlg&callback=projectStart" onerror="mapError()"></script>
+</body>
+
+</html>
